@@ -488,6 +488,14 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5511181331687402634, guid: b43733b84e9bd7e44b7b582f12570c8c, type: 3}
+      propertyPath: _movementSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511181331687402634, guid: b43733b84e9bd7e44b7b582f12570c8c, type: 3}
+      propertyPath: _waypoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511181331687402634, guid: b43733b84e9bd7e44b7b582f12570c8c, type: 3}
       propertyPath: _waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 538073881}
