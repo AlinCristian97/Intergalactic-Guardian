@@ -1,0 +1,1 @@
+This is a 'Space Shooter' type of game
