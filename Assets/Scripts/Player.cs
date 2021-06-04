@@ -5,11 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject _laserPrefab;
-    [SerializeField] private float _projectileSpeed = 10f;
-    
     [SerializeField] private float _movementSpeed = 10f;
+    [SerializeField] private float _projectileSpeed = 10f;
+    [SerializeField] private float _projectileFiringPeriod;
     private float _xMin, _xMax, _yMin, _yMax;
-    
+
+    private Coroutine _firingCoroutine;
+
     void Start()
     {
         SetUpMoveBoundaries();
@@ -30,13 +32,29 @@ public class Player : MonoBehaviour
         Fire();
     }
 
-    private void Fire()
+    IEnumerator FireContinuously()
     {
-        if (Input.GetButtonDown("Fire1"))
+        while (true)
         {
             GameObject laser = Instantiate(_laserPrefab, transform.position, Quaternion.identity);
 
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, _projectileSpeed);
+        
+            yield return new WaitForSeconds(_projectileFiringPeriod);
+        }
+    }
+
+    //TODO: Improve Shooting system
+    private void Fire()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            _firingCoroutine = StartCoroutine(FireContinuously());
+        }
+
+        if (Input.GetButtonUp("Fire1"))
+        {
+            StopCoroutine(_firingCoroutine);
         }
     }
 
