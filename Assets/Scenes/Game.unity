@@ -473,6 +473,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4178582142818494201, guid: bc73942bf8d516e49ab74146f52a3775, type: 3}
+      propertyPath: _looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178582142818494201, guid: bc73942bf8d516e49ab74146f52a3775, type: 3}
       propertyPath: _waveConfigs.Array.size
       value: 4
       objectReference: {fileID: 0}
