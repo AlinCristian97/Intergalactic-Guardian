@@ -97,7 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2b72732a57147429f03c6b4337e771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
+  _health: 300
+  _projectile: {fileID: 3208019283533292017, guid: 7561d57d3a9269944955851d39067ff7, type: 3}
+  _shotCounter: 0
+  _minTimeBetweenShots: 0.2
+  _maxTimeBetweenShots: 3
+  _projectileSpeed: 10
 --- !u!114 &5511181331687402634
 MonoBehaviour:
   m_ObjectHideFlags: 0
