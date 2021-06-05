@@ -103,6 +103,8 @@ MonoBehaviour:
   _minTimeBetweenShots: 0.2
   _maxTimeBetweenShots: 3
   _projectileSpeed: 10
+  _deathVFX: {fileID: 1484379845789863386, guid: 42e33928c87da0b46b6c233ab52eaccc, type: 3}
+  _explosionDuration: 1
 --- !u!114 &5511181331687402634
 MonoBehaviour:
   m_ObjectHideFlags: 0
