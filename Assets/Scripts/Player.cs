@@ -1,13 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private GameObject _laserPrefab;
+    [Header("Stats")]
     [SerializeField] private float _movementSpeed = 10f;
+    [SerializeField] private int _health = 200;
+    
+    [Header("Projectile")]
+    [SerializeField] private GameObject _laserPrefab;
     [SerializeField] private float _projectileSpeed = 10f;
     [SerializeField] private float _projectileFiringPeriod;
+    
     private float _xMin, _xMax, _yMin, _yMax;
 
     private Coroutine _firingCoroutine;
@@ -30,6 +36,22 @@ public class Player : MonoBehaviour
     {
         Move();
         Fire();
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+
+        ProcessHit(damageDealer);
+    }
+
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        _health -= damageDealer.GetDamage();
+        if (_health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator FireContinuously()
