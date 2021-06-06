@@ -71,6 +71,11 @@ public class Player : MonoBehaviour
         AudioSource.PlayClipAtPoint(_deathSFX, Camera.main.transform.position, _deathSFXVolume);
     }
 
+    public int GetHealth()
+    {
+        return _health;
+    }
+
     IEnumerator FireContinuously()
     {
         while (true)
