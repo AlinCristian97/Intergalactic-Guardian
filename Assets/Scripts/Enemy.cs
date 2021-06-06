@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float _health = 100f;
+    [SerializeField] private int _scoreValue = 150;
     
     [Header("Projectile")]
     [SerializeField] private GameObject _projectile;
@@ -76,6 +77,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<GameSession>().AddToScore(_scoreValue);
         Destroy(gameObject);
         GameObject explosion = Instantiate(_deathVFX, transform.position, transform.rotation);
         Destroy(explosion, _explosionDuration);
