@@ -110,7 +110,7 @@ MonoBehaviour:
   _deathSFX: {fileID: 8300000, guid: 524e04af2f95f734ebba691d14963dc9, type: 3}
   _deathSFXVolume: 0.7
   _shootSFX: {fileID: 8300000, guid: 6c760066aefd82742934d175feeae2b2, type: 3}
-  _shootSFXVolume: 0.1
+  _shootSFXVolume: 0.05
 --- !u!114 &5511181331687402634
 MonoBehaviour:
   m_ObjectHideFlags: 0

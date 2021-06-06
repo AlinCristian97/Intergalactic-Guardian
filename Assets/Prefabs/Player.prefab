@@ -100,9 +100,9 @@ MonoBehaviour:
   _health: 1000
   _laserPrefab: {fileID: 4854706473528755500, guid: ce3075257074c364487a6b41aa7f23f7, type: 3}
   _projectileSpeed: 20
-  _projectileFiringPeriod: 0.2
+  _projectileFiringPeriod: 0.1
   _deathSFX: {fileID: 8300000, guid: c6b6458f8f7c1244b85b3fb5be219845, type: 3}
-  _deathSFXVolume: 0.5
+  _deathSFXVolume: 0.25
   _shootSFX: {fileID: 8300000, guid: e0cc23259284b284fa8eeced297896fc, type: 3}
   _shootSFXVolume: 0.1
 --- !u!58 &7465317658520168758
